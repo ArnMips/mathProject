@@ -52,6 +52,14 @@
   <script type="text/paperscript" src="js/arhimedian-spiral.js" canvas="arhimedian_spiral"> </script>
   <script type="text/paperscript" src="js/hyperbolic-spiral.js" canvas="hyperbolic_spiral"> </script>
   <script type="text/paperscript" src="js/logarithmic-spiral.js" canvas="logarithmic_spiral"> </script>
+  
+  var mypapers = [];
+  mypapers[0] = new paper.PaperScope();
+  mypapers[1] = new paper.PaperScope();
+
+  mypapers[0].setup($("#arhimedian_spiral")[0]);
+  mypapers[1].setup($("#hyperbolic_spiral")[0]);
+
  </head>
  <body>
   <div id="container">
