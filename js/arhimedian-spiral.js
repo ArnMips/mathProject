@@ -1,4 +1,4 @@
-var center = new Point(200, 195);
+var center = new paper.Point(200, 195);
 
 var field;
 drawField();
@@ -9,21 +9,21 @@ drawButtons();
     
 var origin = field.bounds.center;
 var maxArea = 120;
-var maxTopLeft = new Point(origin.x - maxArea, origin.y - maxArea);
-var maxBottomRight = new Point(origin.x + maxArea, origin.y + maxArea);
+var maxTopLeft = new paper.Point(origin.x - maxArea, origin.y - maxArea);
+var maxBottomRight = new paper.Point(origin.x + maxArea, origin.y + maxArea);
     
 drawAxis();
     
 /*!*/var a1 = 10;
-/*!*/var line = new Path();
-var lineR = new Path.Line({
+/*!*/var line = new paper.Path();
+var lineR = new paper.Path.Line({
   strokeColor: '#5CCDC9',
   strokeJoin: 'round',
   dashArray: [5, 5],
   from: origin,
   to: [100, 200],
 });
-var dot = new Path.Circle({
+var dot = new paper.Path.Circle({
   center: origin,
   radius: 4,
   fillColor: 'red',
@@ -35,13 +35,13 @@ scroll();
     
     //=== function defenition ===//
 function drawField() {
-  var canvas = new Path.Rectangle({
+  var canvas = new paper.Path.Rectangle({
     from: [0,0],
     to: [400, 440],
     strokeColor: 'black', 
   });
       
-  field = new Path.Rectangle({
+  field = new paper.Path.Rectangle({
     from: [center.x - 178, center.y - 172],
     to: [center.x + 178, center.y + 172],
     strokeColor: '#C9902E',
@@ -52,7 +52,7 @@ function drawField() {
 };
 
 function drawButtons() {
-  var buttonsSubstrate = new Path.Rectangle({
+  var buttonsSubstrate = new paper.Path.Rectangle({
     point: field.bounds.bottomRight - [80,10],
     size: [70, 20],
     strokeColor: '#C9902E',
