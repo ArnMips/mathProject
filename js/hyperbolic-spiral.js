@@ -125,19 +125,19 @@ function scroll() {
   var text = new PointText({
     point: [240+r1, 300+r2],
     fillColor: 'black',
-    content: 'a: ' + (Math.round(scrollBar.position.x/15)),
+    content: 'a: ' + (Math.round(scrollBar.position.x/1)),
   });
   
   scrollBar.onMouseDrag = function(event) {
-    //íóæíî ïîäóìàòü, ñòîèò ëè îãðàíè÷èâàòü ïî âåðòèêàëè?..
-    //ìîæåò ñäåëàòü, ÷òî åñëè óêàçàëåëü áóäåò ïåðåäâèãàòüñÿ â îïðåäåëåííîé îáëàñòè, òî scrollBar òóäà ïåðåìåñòèòüñÿ?
+    //нужно подумать, стоит ли ограничивать по вертикали?..
+    //может сделать, что если указалель будет передвигаться в определенной области, то scrollBar туда переместиться?
     if (event.point.x > 20+r1 && event.point.y > 295+r2 
         && event.point.x < 200+r1 && event.point.y < 310+r2) {
       this.position.x = event.point.x;
       this.fillColor = 'red';
       
-      a1 = this.position.x/15;
-      /*!*/text.content = 'a: ' + (Math.round(this.position.x/15));
+      a1 = this.position.x/1;
+      /*!*/text.content = 'a: ' + (Math.round(this.position.x/1));
    
     }
   }
@@ -163,35 +163,37 @@ function drawSpiral() {
 
   
   view.onFrame = function(event) {
-    if (point.x > maxTopLeft.x 
-    && point.y > maxTopLeft.y 
-    && point.x < maxBottomRight.x
-    && point.y < maxBottomRight.y 
-    && i <= 400) {
-      r = a / fi; 
-      
-      console.log('r = ' + r);
+     r = a / fi;
+     
+    console.log('r = ' + r);
       
       var x = r * Math.cos(fi);
       x = Math.round(x);
       var y = r * Math.sin(fi);
       y = Math.round(y); 
-           
+      
       var vector = new Point(x, y);
       point = vector + origin;
       
+    if (point.x > maxTopLeft.x 
+    && point.y > maxTopLeft.y 
+    && point.x < maxBottomRight.x
+    && point.y < maxBottomRight.y 
+    && i <= 400) {
+
       line.add(point);
       dot.position = point;
       lineR.segments[1].point = point;
+      }
+      fi = fi+k;
       
-      fi = fi + k;
-      
-      if (i % 20 == 0) k *= 0.91;
+      if (i % 20 == 0) k *= 2;
       i++;
-    }
+    
     line.smooth();
     //line.selected = true
   }
 
   line.smooth();
 }
+
