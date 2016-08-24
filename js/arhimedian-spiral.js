@@ -1,6 +1,3 @@
-var center = new paper.Point(200, 195);
-paper = mypapers[0];
-
 var field;
 drawField();
     
