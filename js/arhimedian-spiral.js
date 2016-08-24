@@ -1,3 +1,7 @@
+arhimedian_spiral();
+
+function arhimedian_spiral() {
+    
 var field;
 drawField();
     
@@ -181,4 +185,6 @@ function drawArhimedianSpiral() {
   }
 
   line.smooth();
+}
+
 }
