@@ -1,13 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <script type="text/javascript" src="js/paper-full.js"> </script>
-  <script type="text/paperscript" src="js/arhimedian-spiral.js" canvas="arhimedian_spiral"> </script>
-  <script type="text/paperscript" src="js/hyperbolic-spiral.js" canvas="hyperbolic_spiral"> </script>
-</head>
-<body>
-
   <h1>Спираль Архимеда</h1>
   <p> - данная кривая в полярных координатах задаётся уравнением p=aф
   </p>
@@ -21,6 +11,85 @@
   <canvas width = 400 height = 440 id="hyperbolic_spiral" ></canvas>
   <p>характеристическое свойство: гиперболическая спираль есть траектория точки, движущейся с постоянной скоростью v к полюсу т.ќ по лучу, вращающемуся вокруг полюса с постоянной угловой скоростью w.  рива¤ состоит из 2-х ветвей, симметричных относительно оси Oy - одна ветвь получаетс¤ при ф>0, вторая - при ф<0. √иперболическа¤ спираль имеет асимптоту y=a и асимптотическую точку Ц полюс.\
   </p>
+    
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Замечательные кривые</title>
+  <style type="text/css">
+   body {
+    font: 10pt Arial, Helvetica, sans-serif; /* Шрифт на веб-странице */
+    background: #fff; /* Цвет фона */
+    margin: 0; /* Убираем отступы */
+   }
+   h2 {
+    font-size: 1.1em; /* Размер шрифта */
+    color: #752641; /* Цвет текста */
+    margin-bottom: 0; /* Отступ снизу */
+   }
+   #container {
+    width: 500px; /* Ширина макета */
+    margin: 0 auto; /* Выравниваем по центру */
+    position: relative; /* Относительное позиционирование */
+   }
+   #header {
+    background: #8fa09b; /* Цвет фона */
+    font-size: 24pt; /* Размер текста */
+    font-weight: bold; /* Жирное начертание */
+    color: #edeed5; /* Цвет текста */
+    padding: 5px; /* Отступы вокруг текста */
+   }
+   #content {
+    margin-right: 130px; /* Отступ справа */
+    padding: 10px; /* Поля вокруг текста */
+    border-right: 1px dashed #183533; /* Линия справа */
+   }
+   #content p {
+    margin-top: 0.3em /* Отступ сверху */
+   }
+   #sidebar {
+    position: absolute; /* Абсолютное позиционирование */
+    right: 0; /* Положение от правого края */
+    top: 60px; /* Положение от верхнего края */
+    width: 120px; /* Ширина */
+   }
+   #footer {
+    background: #8fa09b; /* Цвет фона */
+    color: #fff; /* Цвет текста */
+    padding: 5px; /* Отступы вокруг текста */
+   }
+  </style>
   
-</body>
+  <script type="text/javascript" src="js/paper-full.js"> </script>
+  <script type="text/paperscript" src="js/arhimedian-spiral.js" canvas="arhimedian_spiral"> </script>
+  <script type="text/paperscript" src="js/hyperbolic-spiral.js" canvas="hyperbolic_spiral"> </script>
+  
+ </head>
+ <body>
+  <div id="container">
+   <div id="header">Замечательные кривые</div>
+   <div id="content">
+    <h2>Спираль Архимеда</h2>
+    <p> - данная кривая в полярных координатах задаётся уравнением p=aф </p>
+    <canvas width = 400 height = 440 id="arhimedian_spiral" ></canvas>
+    <p>Характеристическое свойство: спираль Архимеда есть траектория точки, движущийся с постоянной скоростью v по лучу, вращающимуся вокруг полюса т.О с постоянной угловой скоростью w. Кривая состоит из двух ветвей, симметричых относительно оси Оy - одна ветвь получается при ф>0, вторая - при ф<0. Расстояние между двумя точками, лежащими на одном полярном луче, постоянно и равно 2pi a</p>
+    
+    <h2>Гиперболическая спираль</h2>
+    <p> - данная кривая в полярных координатах задается уравнением: p=a/ф</p>
+    <canvas width = 400 height = 440 id="hyperbolic_spiral" ></canvas>
+    <p>характеристическое свойство: гиперболическая спираль есть траектория точки, движущейся с постоянной скоростью v к полюсу т.ќ по лучу, вращающемуся вокруг полюса с постоянной угловой скоростью w.  рива¤ состоит из 2-х ветвей, симметричных относительно оси Oy - одна ветвь получаетс¤ при ф>0, вторая - при ф<0. √иперболическа¤ спираль имеет асимптоту y=a и асимптотическую точку Ц полюс.\</p>
+
+   </div>
+   <div id="sidebar">
+    <p><a href="popular.html">Популярные рецепты</a></p>
+    <p><a href="day.html">Рецепт дня</a></p>
+    <p><a href="apple.html">Рецепты на основе яблок</a></p>
+    <p><a href="ice.html">Рецепты на основе льда</a></p>
+    <p><a href="hliv.html">Рецепты из хлива и хрольва</a></p>
+   </div>
+   <div id="footer">&copy; Богдан Аржевитин</div>
+  </div>
+ </body>
 </html>
