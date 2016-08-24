@@ -16,7 +16,7 @@ var maxBottomRight = new Point(origin.x + maxArea, origin.y + maxArea);
 
 drawAxis();
 
-/*!*/var a1 = 10;
+/*!*/var a1 = 164;
 /*!*/var line = new Path();
 var lineR = new Path.Line({
   strokeColor: '#5CCDC9',
